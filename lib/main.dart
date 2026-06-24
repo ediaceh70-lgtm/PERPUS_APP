@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'config/theme.dart';
+import 'config/router.dart';
 import 'providers/auth_provider.dart';
 import 'providers/book_provider.dart';
 import 'providers/borrowing_provider.dart';
-import 'screens/auth/login_page.dart';
 import 'screens/splash_screen.dart';
 
 void main() async {
@@ -29,6 +29,7 @@ class PerpusApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
         home: const SplashScreen(),
+        onGenerateRoute: AppRouter.generateRoute,
       ),
     );
   }
